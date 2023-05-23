@@ -1,0 +1,60 @@
+# Project: Projeto1
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = mergeando2ou3arkivos.o ../boost_1_35_0/libs/program_options/src/cmdline.o ../boost_1_35_0/libs/program_options/src/config_file.o ../boost_1_35_0/libs/program_options/src/convert.o ../boost_1_35_0/libs/program_options/src/options_description.o ../boost_1_35_0/libs/program_options/src/parsers.o ../boost_1_35_0/libs/program_options/src/positional_options.o ../boost_1_35_0/libs/program_options/src/utf8_codecvt_facet.o ../boost_1_35_0/libs/program_options/src/value_semantic.o ../boost_1_35_0/libs/program_options/src/variables_map.o ../boost_1_35_0/libs/program_options/src/winmain.o $(RES)
+LINKOBJ  = mergeando2ou3arkivos.o ../boost_1_35_0/libs/program_options/src/cmdline.o ../boost_1_35_0/libs/program_options/src/config_file.o ../boost_1_35_0/libs/program_options/src/convert.o ../boost_1_35_0/libs/program_options/src/options_description.o ../boost_1_35_0/libs/program_options/src/parsers.o ../boost_1_35_0/libs/program_options/src/positional_options.o ../boost_1_35_0/libs/program_options/src/utf8_codecvt_facet.o ../boost_1_35_0/libs/program_options/src/value_semantic.o ../boost_1_35_0/libs/program_options/src/variables_map.o ../boost_1_35_0/libs/program_options/src/winmain.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib"  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include"  -I"C:/Dev-Cpp/boost_1_35_0"  -I"C:/Dev-Cpp/boost_1_35_0/boost" 
+BIN  = Projeto-Merge.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Projeto-Merge.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "Projeto-Merge.exe" $(LIBS)
+
+mergeando2ou3arkivos.o: mergeando2ou3arkivos.cpp
+	$(CPP) -c mergeando2ou3arkivos.cpp -o mergeando2ou3arkivos.o $(CXXFLAGS)
+
+../boost_1_35_0/libs/program_options/src/cmdline.o: ../boost_1_35_0/libs/program_options/src/cmdline.cpp
+	$(CPP) -c ../boost_1_35_0/libs/program_options/src/cmdline.cpp -o ../boost_1_35_0/libs/program_options/src/cmdline.o $(CXXFLAGS)
+
+../boost_1_35_0/libs/program_options/src/config_file.o: ../boost_1_35_0/libs/program_options/src/config_file.cpp
+	$(CPP) -c ../boost_1_35_0/libs/program_options/src/config_file.cpp -o ../boost_1_35_0/libs/program_options/src/config_file.o $(CXXFLAGS)
+
+../boost_1_35_0/libs/program_options/src/convert.o: ../boost_1_35_0/libs/program_options/src/convert.cpp
+	$(CPP) -c ../boost_1_35_0/libs/program_options/src/convert.cpp -o ../boost_1_35_0/libs/program_options/src/convert.o $(CXXFLAGS)
+
+../boost_1_35_0/libs/program_options/src/options_description.o: ../boost_1_35_0/libs/program_options/src/options_description.cpp
+	$(CPP) -c ../boost_1_35_0/libs/program_options/src/options_description.cpp -o ../boost_1_35_0/libs/program_options/src/options_description.o $(CXXFLAGS)
+
+../boost_1_35_0/libs/program_options/src/parsers.o: ../boost_1_35_0/libs/program_options/src/parsers.cpp
+	$(CPP) -c ../boost_1_35_0/libs/program_options/src/parsers.cpp -o ../boost_1_35_0/libs/program_options/src/parsers.o $(CXXFLAGS)
+
+../boost_1_35_0/libs/program_options/src/positional_options.o: ../boost_1_35_0/libs/program_options/src/positional_options.cpp
+	$(CPP) -c ../boost_1_35_0/libs/program_options/src/positional_options.cpp -o ../boost_1_35_0/libs/program_options/src/positional_options.o $(CXXFLAGS)
+
+../boost_1_35_0/libs/program_options/src/utf8_codecvt_facet.o: ../boost_1_35_0/libs/program_options/src/utf8_codecvt_facet.cpp
+	$(CPP) -c ../boost_1_35_0/libs/program_options/src/utf8_codecvt_facet.cpp -o ../boost_1_35_0/libs/program_options/src/utf8_codecvt_facet.o $(CXXFLAGS)
+
+../boost_1_35_0/libs/program_options/src/value_semantic.o: ../boost_1_35_0/libs/program_options/src/value_semantic.cpp
+	$(CPP) -c ../boost_1_35_0/libs/program_options/src/value_semantic.cpp -o ../boost_1_35_0/libs/program_options/src/value_semantic.o $(CXXFLAGS)
+
+../boost_1_35_0/libs/program_options/src/variables_map.o: ../boost_1_35_0/libs/program_options/src/variables_map.cpp
+	$(CPP) -c ../boost_1_35_0/libs/program_options/src/variables_map.cpp -o ../boost_1_35_0/libs/program_options/src/variables_map.o $(CXXFLAGS)
+
+../boost_1_35_0/libs/program_options/src/winmain.o: ../boost_1_35_0/libs/program_options/src/winmain.cpp
+	$(CPP) -c ../boost_1_35_0/libs/program_options/src/winmain.cpp -o ../boost_1_35_0/libs/program_options/src/winmain.o $(CXXFLAGS)
